@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>María Jesús & Manuel</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="music-control">
+<button onclick="toggleMusic()">🎵 Música</button>
+<audio id="bgMusic" loop>
+  <source src="perfect-instrumental.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<header class="hero">
+<div class="hero-content fade-in">
+<h1>María Jesús & Manuel</h1>
+<p>03 · Julio · 2027</p>
+<section class="countdown-section">
+    <div class="countdown-card">
+        <div class="countdown-title">Cuenta atrás para nuestro gran día</div>
+
+        <div class="countdown-values">
+            <div class="time-unit">
+                <span id="days">0</span>
+                <small>Días</small>
+            </div>
+
+            <div class="separator">·</div>
+
+            <div class="time-unit">
+                <span id="hours">0</span>
+                <small>Horas</small>
+            </div>
+
+            <div class="separator">·</div>
+
+            <div class="time-unit">
+                <span id="minutes">0</span>
+                <small>Minutos</small>
+            </div>
+
+            <div class="separator">·</div>
+
+            <div class="time-unit">
+                <span id="seconds">0</span>
+                <small>Segundos</small>
+            </div>
+        </div>
+
+        <div class="countdown-flower">❀ ❁ ❀</div>
+    </div>
+</section>
+<a href="#evento" class="btn">Descubrir</a>
+</div>
+</header>
+
+<section class="section fade-in">
+<h2>Nuestra Historia</h2>
+<p>Personaliza este texto con vuestra historia de amor.</p>
+</section>
+
+<section id="evento" class="section fade-in">
+<h2>Detalles del Evento</h2>
+<div class="cards">
+<div class="card"><h3>Ceremonia</h3><p>Hora y ubicación.</p></div>
+<div class="card"><h3>Celebración</h3><p>Banquete y fiesta.</p></div>
+<div class="card"><h3>Alojamiento</h3><p>Recomendaciones.</p></div>
+</div>
+</section>
+
+<section class="section fade-in">
+<h2>Ubicación</h2>
+<p>
+<a class="btn" target="_blank" href="https://maps.google.com/?q=36.8202685,-2.0512239">
+Abrir en Google Maps
+</a>
+</p>
+<iframe
+ src="https://maps.google.com/maps?q=36.8202685,-2.0512239&t=p&z=16&output=embed">
+</iframe>
+</section>
+
+<section class="section fade-in">
+<h2>Confirmación de asistencia</h2>
+<a class="btn"
+target="_blank"
+href="https://forms.gle/bTcYRHeMWUwa6bgw6">
+Formulario
+</a>
+</section>
+
+<footer>
+<p>Os esperamos ♥</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
