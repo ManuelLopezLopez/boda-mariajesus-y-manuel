@@ -32,13 +32,18 @@ const observer=new IntersectionObserver(entries=>{
 });
 document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
 
-function toggleMusic() {
-    const music = document.getElementById("bgMusic");
+const audio = document.getElementById('bg-music');
+function startAudio(){
+	audio.play().then(() => console.log("Audio Iniciado"));
 	
-    if (music.paused) {
-        music.play();
-    } else {
-        music.pause();
-    }
+
 }
+	 ['click','touchstart','scroll'].forEach(event =>{
+		   window.addEventListener(event,startAudio,{once: true});
+		   
+	   });
+   
+	  
+   
+
 
