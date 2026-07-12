@@ -1,5 +1,5 @@
 
-const target = new Date('2027-07-03T00:00:00');
+const target = new Date('2027-07-03T20:30:00');
 
 function updateCountdown() {
     const now = new Date();
@@ -32,18 +32,62 @@ const observer=new IntersectionObserver(entries=>{
 });
 document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
 
-const audio = document.getElementById('bg-music');
-function startAudio(){
-	audio.play().then(() => console.log("Audio Iniciado"));
-	
+const track = document.querySelector('.slider-track');
+const cards = document.querySelectorAll('.cards');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
 
+let currentIndex = 0;
+
+function moveSlider() {
+  const cardWidth = cards[0].getBoundingClientRect().width;
+  const gap = parseInt(window.getComputedStyle(track).gap) || 0;
+  const amountToMove = (cardWidth + gap) * currentIndex;
+  
+  track.style.transform = `translateX(-${amountToMove}px)`;
 }
-	 ['click','touchstart','scroll'].forEach(event =>{
-		   window.addEventListener(event,startAudio,{once: true});
-		   
-	   });
+
+nextBtn.addEventListener('click', () => {
+  const cardsVisible = Math.round(track.parentElement.clientWidth / cards[0].clientWidth);
+  const maxIndex = cards.length - cardsVisible;
+
+  if (currentIndex < maxIndex) {
+    currentIndex++;
+  } else {
+    currentIndex = 0; 
+  }
+  moveSlider();
+});
+
+prevBtn.addEventListener('click', () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+  } else {
+    const cardsVisible = Math.round(track.parentElement.clientWidth / cards[0].clientWidth);
+    currentIndex = cards.length - cardsVisible; 
+  }
+  moveSlider();
+});
+
+window.addEventListener('resize', moveSlider);
    
 	  
-   
+   // Seleccionamos el cuadradito de color
+const colorBox = document.querySelector('.color-box');
+
+if (colorBox) {
+  colorBox.addEventListener('click', function(e) {
+    // Evita que el click interactúe con otros elementos del fondo
+    e.stopPropagation(); 
+    // Añade la clase si no la tiene, o la quita si ya la tiene
+    this.classList.toggle('active');
+  });
+
+  // OPCIONAL: Si el usuario hace clic en cualquier otra parte de la pantalla,
+  // el cuadradito vuelve a su tamaño normal.
+  document.addEventListener('click', function() {
+    colorBox.classList.remove('active');
+  });
+}
 
 

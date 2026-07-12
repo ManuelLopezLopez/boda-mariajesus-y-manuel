@@ -9,13 +9,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<div class="music-control">
-<audio id="bgMusic" loop preload="auto">
-  <source src="perfect-instrumental.mp3" type="audio/mpeg">
-</audio>
-</div>
-
 <header class="hero">
 <div class="hero-content fade-in">
 <h1>María Jesús & Manuel</h1>
@@ -55,26 +48,60 @@
         <div class="countdown-flower">❀ ❁ ❀</div>
     </div>
 </section>
-<a href="#evento" class="btn">Descubrir</a>
-</div>
 </header>
 
 <section class="section fade-in">
-<h2>Nuestra Historia</h2>
-<p>Personaliza este texto con vuestra historia de amor.</p>
-</section>
+<div class="slider-container">
+    <div class="slider-window">
+      <div class="slider-track">
+        
+        <!-- Tarjeta 1 -->
+        <div class="cards">
+            <img src="imagen1.jpeg" alt="Imagen 1" class="cards-img">
+        </div>
+        <!-- Tarjeta 2 -->
+        <div class="cards">       
+            <img src="imagen2.jpeg" alt="Imagen 2" class="cards-img">
+        </div>
+        <!-- Tarjeta 3 -->
+        <div class="cards">
+            <img src="imagen3.jpeg" alt="Imagen 3" class="cards-img">
+        </div>
 
-<section id="evento" class="section fade-in">
-<h2>Detalles del Evento</h2>
-<div class="cards">
-<div class="card"><h3>Ceremonia</h3><p>Hora y ubicación.</p></div>
-<div class="card"><h3>Celebración</h3><p>Banquete y fiesta.</p></div>
-<div class="card"><h3>Alojamiento</h3><p>Recomendaciones.</p></div>
+        <!-- Tarjeta 4 -->
+        <div class="cards">
+            <img src="imagen4.jpeg" alt="Imagen 4" class="cards-img">
+        </div>
+      </div>
+    </div>
+    <!-- Botones de navegación -->
+    <button class="nav-btn prev-btn" id="prevBtn">&#10094;</button>
+    <button class="nav-btn next-btn" id="nextBtn">&#10095;</button>
+  </div>
+</section>
+<section id="evento" class="section fade-in" style="padding:0px!important;">
+<h1>Detalles del Evento</h1>
+<div class="cartas">
+<!-- Tarjeta 1: Ceremonia -->
+  <div class="card">
+    <h3>Ceremonia</h3>
+    <p>Nos vemos a las <span class="time">20:00 h</span> en el cortijo La Loma by Olivencia para dar el "sí, quiero".</p>
+  </div>
+  <!-- Tarjeta 2: Celebración -->
+  <div class="card">
+    <h3>Celebración</h3>
+    <p>¡Todo en el mismo sitio! A continuación disfrutaremos del cocktail, el banquete y la fiesta.</p>
+  </div>
+  <!-- Tarjeta 3: Código de Vestimenta -->
+  <div class="card card-full">
+    <h3>Dress Code</h3>
+    <p>Formal.<br><strong>Nota:</strong> Agradecemos evitar el uso de ropa blanca y <span class="color-box" style="background-color: rgb(213, 0, 117);" title="Haz clic para ampliar"></span>buganvilla.</p>
+  </div>
 </div>
 </section>
 
 <section class="section fade-in">
-<h2>Ubicación</h2>
+<h1>Ubicación</h1>
 <p>
 <a class="btn" target="_blank" href="https://maps.google.com/?q=36.8202685,-2.0512239">
 Abrir en Google Maps
@@ -84,9 +111,12 @@ Abrir en Google Maps
  src="https://maps.google.com/maps?q=36.8202685,-2.0512239&t=p&z=16&output=embed">
 </iframe>
 </section>
-
+<div id="album">
+<h1>¡Comparte tus fotos del evento en el siguiente enlace!</h1>
+<a href="https://photos.app.goo.gl/c9adBvfCRrSNBAYdA" class="btn">Fotos</a>
+</div>
 <section class="section fade-in">
-<h2>Confirmación de asistencia</h2>
+<h1>Confirmación de asistencia</h1>
 <a class="btn"
 target="_blank"
 href="https://forms.gle/bTcYRHeMWUwa6bgw6">
