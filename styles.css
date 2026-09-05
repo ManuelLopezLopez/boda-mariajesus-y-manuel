@@ -249,6 +249,13 @@ button{padding:10px 16px;border:none;border-radius:20px;cursor:pointer}
     height: 380px; /* Altura ideal para smartphones */
   }
   .slider-window { overflow-x: auto; }
+  .slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  padding: 20px 0;
+  margin-left: 0px;
+}
 }
 /* Estilos base para el cuadradito de color */
 .color-box {
@@ -336,7 +343,152 @@ button{padding:10px 16px;border:none;border-radius:20px;cursor:pointer}
 
 @media (max-width: 768px) {
   .flor-esquina {
-    width: 80px;
+    width: 180px;
   
+}
+
+
+/* Estilo de tu botón */
+.btn-invitation {
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  background-color: #d4a373;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Pantalla completa (creada dinámicamente) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor flotante en el centro de la pantalla */
+.modal-content {
+  position: relative;
+  width: 85%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Ajustes del reproductor de video */
+.video-container {
+  width: 100%;
+  max-height: 75vh;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.video-container video {
+  width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  display: block;
+}
+
+/* Botón de cierre (X) */
+.close-btn {
+  position: absolute;
+  top: -45px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.25);
+  border: none;
+  color: white;
+  font-size: 24px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Posición de la cruz en pantallas medianas y grandes */
+@media (min-width: 480px) {
+  .close-btn {
+    top: -15px;
+    right: calc(50% - 180px); /* Ajustado a la esquina del contenedor */
+    transform: none;
+  }
+}
+/* Estilos para la tarjeta activadora del vídeo en el carrusel */
+.video-card-trigger {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/baile.jpeg') center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.video-overlay-preview {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.video-overlay-preview .play-icon {
+  font-size: 2.5rem;
+  background: rgba(255, 255, 255, 0.25);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.video-card-trigger:hover .play-icon {
+  transform: scale(1.15);
+}
+
+.video-overlay-preview p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* Botón para abrir el vídeo de bodas */
+.btn-video {
+  background: #6f8163;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-video:hover {
+  background-color: #5a6a50;
+  transform: scale(1.05);
 }
 }

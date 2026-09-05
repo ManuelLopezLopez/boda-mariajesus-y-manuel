@@ -88,6 +88,63 @@ if (colorBox) {
   document.addEventListener('click', function() {
     colorBox.classList.remove('active');
   });
+
+}
+// LÓGICA DEL REPRODUCTOR INDEPENDIENTE (POP-UP CENTRADO)
+const openVideoBtn = document.getElementById('openVideoBtn');
+
+if (openVideoBtn) {
+  openVideoBtn.addEventListener('click', function () {
+    // 1. Crear la pantalla completa
+    const modal = document.createElement('div');
+    modal.id = 'weddingVideoModal';
+    
+    Object.assign(modal.style, {
+      position: 'fixed',
+      top: '0',
+      left: '0',
+      width: '100vw',
+      height: '100vh',
+      backgroundColor: 'rgba(0, 0, 0, 0.8)',
+      backdropFilter: 'blur(10px)',
+      WebkitBackdropFilter: 'blur(10px)',
+      zIndex: '999999',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      margin: '0',
+      padding: '0'
+    });
+
+    // 2. Insertar contenedor e interfaz del reproductor
+    modal.innerHTML = `
+      <div style="position: relative; width: 85%; max-width: 340px; display: flex; flex-direction: column; align-items: center; justify-content: center; margin: auto;">
+        <button id="closeVideoBtn" style="position: absolute; top: -45px; right: 0; background: rgba(255, 255, 255, 0.3); border: none; color: white; font-size: 24px; width: 38px; height: 38px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 1000000;">&times;</button>
+        <div style="width: 100%; max-height: 75vh; box-shadow: 0 10px 30px rgba(0,0,0,0.8); border-radius: 16px; overflow: hidden; background: #000; display: flex; justify-content: center; align-items: center;">
+          <video id="weddingVideoPlayer" controls autoplay playsinline style="width: 100%; max-height: 75vh; object-fit: contain; display: block; margin: 0 auto;">
+            <source src="images/video.mp4" type="video/mp4">
+            Tu navegador no soporta vídeos HTML5.
+          </video>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(modal);
+
+    // 3. Eliminar por completo el modal al cerrar
+    function destroyModal() {
+      const video = document.getElementById('weddingVideoPlayer');
+      if (video) video.pause();
+      modal.remove();
+    }
+
+    document.getElementById('closeVideoBtn').addEventListener('click', destroyModal);
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) {
+        destroyModal();
+      }
+    });
+  });
 }
 
 
