@@ -1,164 +1,160 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>María Jesús & Manuel</title>
-<link rel="stylesheet" href="styles.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link
-	href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400&display=swap"
-	rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-	href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
-	rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>María Jesús & Manuel</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
-	<header class="hero">
-		<div class="hero-overlay"></div>
-		<div class="hero-content fade-in">
-			<h1>
-				María Jesús<br>&<br>Manuel
-			</h1>
-			<p>03 · Julio · 2027</p>
-			<section class="countdown-section">
-				<div class="countdown-card">
-					<div class="countdown-title">Cuenta atrás para nuestro gran
-						día</div>
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content fade-in">
+      <h1>María Jesús<br>&<br>Manuel</h1>
+      <p>03 · Julio · 2027</p>
+      
+      <section class="countdown-section">
+        <div class="countdown-card">
+          <div class="countdown-title">Cuenta atrás para nuestro gran día</div>
+          <div class="countdown-values">
+            <div class="time-unit"><span id="days">0</span> <small>Días</small></div>
+            <div class="separator">·</div>
+            <div class="time-unit"><span id="hours">0</span> <small>Horas</small></div>
+            <div class="separator">·</div>
+            <div class="time-unit"><span id="minutes">0</span> <small>Minutos</small></div>
+            <div class="separator">·</div>
+            <div class="time-unit"><span id="seconds">0</span> <small>Segundos</small></div>
+          </div>
+          <div class="countdown-flower">❀ ❁ ❀</div>
+        </div>
+      </section>
+    </div>
+  </header>
 
-					<div class="countdown-values">
-						<div class="time-unit">
-							<span id="days">0</span> <small>Días</small>
-						</div>
+  <main class="contenido-principal">
+    <img src="images/buganvilla.png" class="flor-esquina top-left" alt="Decoración floral">
+    <img src="images/buganvilla.png" class="flor-esquina top-right" alt="Decoración floral">
+    <img src="images/buganvilla.png" class="flor-esquina bottom-left" alt="Decoración floral">
+    <img src="images/buganvilla.png" class="flor-esquina bottom-right" alt="Decoración floral">
 
-						<div class="separator">·</div>
+    <!-- Banner Vídeo -->
+    <section class="video-banner fade-in">
+      <div class="video-banner-content">
+        <span class="banner-flower">❀</span>
+        <h2>Un momento especial</h2>
+        <p>Un pequeño adelanto de nuestra historia juntos.<br>Pulsa a continuación para ver nuestro vídeo.</p>
+        <button id="openVideoBtn" class="btn">✨ Click aquí ✨</button>
+      </div>
+    </section>
 
-						<div class="time-unit">
-							<span id="hours">0</span> <small>Horas</small>
-						</div>
+    <!-- Carrusel de Fotos -->
+    <section class="section fade-in">
+      <div class="slider-container">
+        <div class="slider-window">
+          <div class="slider-track">
+            <div class="cards"><img src="images/baile.jpeg" alt="Foto 1" class="cards-img"></div>
+            <div class="cards"><img src="images/levantamiento.jpeg" alt="Foto 2" class="cards-img"></div>
+            <div class="cards"><img src="images/espejoPosado.jpeg" alt="Foto 3" class="cards-img"></div>
+          </div>
+        </div>
+        <button class="nav-btn prev-btn" id="prevBtn">&#10094;</button>
+        <button class="nav-btn next-btn" id="nextBtn">&#10095;</button>
+      </div>
+    </section>
 
-						<div class="separator">·</div>
+    <!-- Detalles del Evento (Sin recuadro exterior global, manteniendo sus 3 tarjetas) -->
+    <section id="evento" class="section fade-in">
+      <h1>Detalles del Evento</h1>
+      <div class="cartas">
+        <div class="card card-full">
+          <h2>Ceremonia y Celebración</h2>
+          <p>
+            A las <span class="time">19:00 h</span> (por confirmar) daremos el "Sí quiero" en el Cortijo La Loma by Olivencia. El banquete y celebración tendrán lugar en la misma localización.
+          </p>
+        </div>
+        <div class="card card-full">
+          <h2>Dress Code</h2>
+          <p>
+            Formal.<br>
+            <strong>Nota:</strong> Agradecemos evitar el uso de ropa blanca y 
+            <span class="color-box" style="background-color: rgb(213, 0, 117);" title="Haz clic para ampliar"></span>buganvilla.
+          </p>
+        </div>
+        <div class="card card-full">
+          <h2>Regalos</h2>
+          <p>Vuestra presencia es nuestro mejor regalo. Pero si además queréis contribuir a nuestra luna de miel, toda ayuda es bienvenida.</p>
+        </div>
+      </div>
+    </section>
 
-						<div class="time-unit">
-							<span id="minutes">0</span> <small>Minutos</small>
-						</div>
+    <!-- SECCIÓN UBICACIÓN (En Tarjeta) -->
+    <section class="section fade-in">
+      <div class="seccion-card-simple">
+        <h1>Ubicación</h1>
+        <p>
+          <a class="btn" target="_blank" href="https://maps.google.com/?q=36.8202685,-2.0512239">
+            Abrir en Google Maps
+          </a>
+        </p>
+        <iframe src="https://maps.google.com/maps?q=36.8202685,-2.0512239&t=p&z=16&output=embed"></iframe>
+      </div>
+    </section>
 
-						<div class="separator">·</div>
+    <!-- SECCIÓN ÁLBUM (En Tarjeta) -->
+    <section class="section fade-in">
+      <div id="album" class="seccion-card-simple">
+        <h1>¡Comparte tus fotos del evento!</h1>
+        <p>
+          Mediante el siguiente enlace podrás compartir las fotos que hagas durante el evento para tener más recuerdos aún del gran día, además de poder descargarlas para ti.
+        </p>
+        <a href="https://photos.app.goo.gl/c9adBvfCRrSNBAYdA" target="_blank" class="btn">Subir / Ver Fotos</a>
+      </div>
+    </section>
 
-						<div class="time-unit">
-							<span id="seconds">0</span> <small>Segundos</small>
-						</div>
-					</div>
+    <!-- SECCIÓN ALOJAMIENTO (Con Foto) -->
+    <section id="alojamiento" class="section fade-in">
+      <div class="alojamiento-card">
+        <div class="alojamiento-img-wrapper">
+          <img src="images/hotel-de-naturaleza.jpg" alt="Hotel recomendado" class="alojamiento-img">
+        </div>
+        <div class="alojamiento-info">
+          <h1>Alojamiento</h1>
+          <p class="alojamiento-subtitulo">Hotel Naturaleza Rodalquilar & Spa Cabo de Gata</p>
+          <p>
+            Para vuestra comodidad, hemos seleccionado este hotel cercano al lugar de la celebración. Dispone de tarifas especiales para los invitados indicando el código durante la reserva por email.</br><strong>(140€/noche, minimo de 2 noches con desayuno incluido)</strong>
+          </p>
+          <ul class="alojamiento-detalles">
+            <li>📍 <strong>Ubicación: </strong> Paraje Los Albacetes S/N Rodalquilar (A 6 minutos en coche de la finca)</li>
+            <li>🔑 <strong>Código de reserva: </br>En el concepto del email debeis poner </br></strong> BODA-MARÍA JESÚS Y MANUEL</li>
+            <li>📞 <strong>Reservas: </strong>direccion@hotelrodalquilar.com </li>
+            <p>De no disponer de mas habitaciones o no querer dormir en los alrededores, habrá autobus de vuelta.</p>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-					<div class="countdown-flower">❀ ❁ ❀</div>
-				</div>
-			</section>
-	</header>
-	<main class="contenido-principal">
-		<img src="images/buganvilla.png" class="flor-esquina top-left"
-			alt="Decoración floral"><img src="images/buganvilla.png"
-			class="flor-esquina top-right" alt="Decoración floral"> <img
-			src="images/buganvilla.png" class="flor-esquina bottom-left"
-			alt="Decoración floral"> <img src="images/buganvilla.png"
-			class="flor-esquina bottom-right" alt="Decoración floral">
-		<section class="section fade-in">
+    <!-- SECCIÓN CONFIRMACIÓN (En Tarjeta) -->
+    <section class="section fade-in">
+      <div class="seccion-card-simple">
+        <h1>Confirmación de asistencia</h1>
+        <p>
+          Os agradeceríamos que rellenarais la confirmación de asistencia antes del 31 de marzo de 2027. Muchas gracias.
+        </p>
+        <a class="btn" target="_blank" href="https://forms.gle/bTcYRHeMWUwa6bgw6">
+          Formulario de Confirmación
+        </a>
+      </div>
+    </section>
+  </main>
 
-<!-- Botón independiente para ver el vídeo -->
-  <div style="text-align: center; margin-bottom: 25px;">
-    <button id="openVideoBtn" class="btn-video">
-      ✨ Pulsa para ver nuestro vídeo ✨
-    </button>
-  </div>
-			<div class="slider-container">
-				<div class="slider-window">
-					<div class="slider-track">
-					
-						<div class="cards">
-							<img src="images/baile.jpeg" alt="Imagen 1" class="cards-img">
-						</div>
-						<div class="cards">
-							<img src="images/levantamiento.jpeg" alt="Imagen 2"
-								class="cards-img">
-						</div>
-						<div class="cards">
-							<img src="images/espejoPosado.jpeg" alt="Imagen 3"
-								class="cards-img">
-						</div>
-					</div>
-				</div>
-				<!-- Botones de navegación -->
-				<button class="nav-btn prev-btn" id="prevBtn">&#10094;</button>
-				<button class="nav-btn next-btn" id="nextBtn">&#10095;</button>
-			</div>
-		</section>
-		<section id="evento" class="section fade-in"
-			style="padding: 0px !important;">
-			<h1>Detalles del Evento</h1>
-			<div class="cartas">
-				<!-- Tarjeta 1: Ceremonia -->
-				<div class="card card-full">
-					<h2>Ceremonia y Celebración</h2>
-					<p>
-						A las <span class="time">19:00 h</span> (por confirmar) daremos el
-						"Sí quiero" en el Cortijo La Loma by Olivencia. El banquete y
-						celebración tendrán lugar en la misma localización, por lo que no
-						es necesario desplazarse.
-					</p>
-				</div>
-				<!-- Tarjeta 2: Código de Vestimenta -->
-				<div class="card card-full">
-					<h2>Dress Code</h2>
-					<p>
-						Formal.<br>
-						<strong>Nota:</strong> Agradecemos evitar el uso de ropa blanca y
-						<span class="color-box"
-							style="background-color: rgb(213, 0, 117);"
-							title="Haz clic para ampliar"></span>buganvilla.
-					</p>
-				</div>
-				<!-- Tarjeta 3: Regalo -->
-				<div class="card card-full">
-					<h2>Regalos</h2>
-					<p>Vuestra presencia es nuestro mejor regalo. Pero si ademas
-						quereis contribuir a nuestra luna de miel, toda ayuda es
-						bienvenida</p>
-				</div>
-			</div>
-		</section>
+  <footer>
+    <p>Os esperamos ♥</p>
+  </footer>
 
-		<section class="section fade-in">
-			<h1>Ubicación</h1>
-			<p>
-				<a class="btn" target="_blank"
-					href="https://maps.google.com/?q=36.8202685,-2.0512239"> Abrir
-					en Google Maps </a>
-			</p>
-			<iframe
-				src="https://maps.google.com/maps?q=36.8202685,-2.0512239&t=p&z=16&output=embed">
-			</iframe>
-		</section>
-		<div id="album">
-			<h1>¡Comparte tus fotos del evento en el siguiente enlace!</h1>
-			<p style="text-align: center;">Mediante el siguiente enlace
-				podrás compartir las fotos que hagas durante el evento para tener
-				más recuerdos aún del gran día, además de poder descargarlas para
-				ti.</p>
-			<a href="https://photos.app.goo.gl/c9adBvfCRrSNBAYdA" class="btn">Fotos</a>
-		</div>
-		<section class="section fade-in">
-			<h1>Confirmación de asistencia</h1>
-			<p style="text-align: center;">Os agradeceríamos que rellenarais
-				la confirmación de asistencia antes del 31 de marzo de 2027. Muchas
-				gracias.</p>
-			<a class="btn" target="_blank"
-				href="https://forms.gle/bTcYRHeMWUwa6bgw6"> Formulario </a>
-		</section>
-	</main>
-	<footer>
-		<p>Os esperamos ♥</p>
-	</footer>
-
-	<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

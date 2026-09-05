@@ -1,4 +1,16 @@
+// Desactiva la restauración automática del scroll del navegador
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
 
+// Fuerza el desplazamiento al inicio al cargar la página
+window.addEventListener('beforeunload', () => {
+  window.scrollTo(0, 0);
+});
+
+window.addEventListener('load', () => {
+  window.scrollTo(0, 0);
+});
 const target = new Date('2027-07-03T20:30:00');
 
 function updateCountdown() {
