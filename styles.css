@@ -58,6 +58,7 @@ h1, h2 {
   border: none;
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.2s ease;
+  font-size:16px;
 }
 
 .btn:hover {
@@ -374,8 +375,8 @@ footer {
 }
 
 .alojamiento-img-wrapper {
-  width: 140px;
-  height: 140px;
+  width: 170px;
+  height: 170px;
   flex-shrink: 0;
   border-radius: 12px;
   overflow: hidden;
@@ -398,7 +399,7 @@ footer {
 }
 
 .alojamiento-info h1 {
-   margin-top: 0;
+  margin-top: 0;
   color: #7c6650;
   font-size: 2.8rem;
 }
@@ -451,6 +452,76 @@ footer {
 .top-right { top: 0; right: 0; transform: scale(-1, -1); }
 .bottom-left { bottom: 0; left: 0; transform: none; }
 .bottom-right { bottom: 0; right: 0; transform: scaleX(-1); }
+/* ===================================================
+   CONTENIDO INTERNO DEL MODAL DRESS CODE
+   =================================================== */
+.dress-modal-content {
+  position: relative;
+  background: white;
+  width: 90%;
+  max-width: 420px;
+  border-radius: 20px;
+  padding: 25px 15px 15px 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  box-sizing: border-box;
+  max-height: 85vh;
+  overflow-y: auto;
+  margin: auto;
+}
+
+.dress-modal-close {
+  position: absolute;
+  top: 8px;
+  right: 14px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  color: #7c6650;
+  cursor: pointer;
+  line-height: 1;
+  z-index: 10;
+}
+
+.dress-modal-img-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+}
+
+.dress-modal-img-wrapper img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+/* 💻 REGLAS EXCLUSIVAS PARA ORDENADORES (SIN SCROLL Y VISIÓN COMPLETA) */
+@media (min-width: 769px) {
+  .dress-modal-content {
+    width: auto;
+    max-width: 85vw;          /* Máximo ancho permitido respecto a la pantalla */
+    max-height: 90vh;         /* Máximo alto permitido respecto a la pantalla */
+    padding: 20px 30px 25px 30px;
+    overflow: hidden;         /* Desactiva la barra de scroll */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dress-modal-img-wrapper {
+    flex: 1;
+    min-height: 0;            /* Permite achicar si la pantalla es bajita */
+  }
+
+  .dress-modal-img-wrapper img {
+    max-height: 70vh;         /* Escala la altura para encajar sin scroll */
+    width: auto;              /* Mantiene la proporción original */
+    object-fit: contain;      /* Garantiza que la imagen nunca se corte */
+  }
+}
 
 /* ===================================================
    ADAPTACIÓN RESPONSIVA (TABLETS Y SMARTPHONES)
@@ -464,8 +535,8 @@ footer {
 }
 
 @media (max-width: 768px) {
-	.hero {
-    background-position: 75% center; /* O usa un valor como 80% o 'right center' según el encuadre deseado */
+  .hero {
+    background-position: 75% center;
   }
   .section {
     padding: 30px 4%;
@@ -518,6 +589,11 @@ footer {
 
   .video-banner-content h2 {
     font-size: 2.2rem;
+  }
+  
+  .cards:nth-child(2) .cards-img,
+  .cards:nth-child(3) .cards-img {
+    object-position: center 20%;
   }
 
   .cards {
