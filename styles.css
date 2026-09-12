@@ -203,12 +203,11 @@ footer {
   margin-bottom: 8px;
 }
 
-.video-banner-content h2 {
+.video-banner-content h1 {
   font-family: 'Great Vibes', cursive;
   font-size: 2.8rem;
   color: #7c6650;
   margin: 0 0 10px 0;
-  font-weight: normal;
 }
 
 .video-banner-content p {
